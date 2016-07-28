@@ -1,0 +1,602 @@
+html {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*----------------nav---------------------*/
+.responsive-nav {
+  position: relative;
+  /*max-width: 20em;*/
+  overflow: hidden;
+  width: 100%;
+  padding-top: 2%;
+  /* Now show full width */
+}
+
+@media (min-device-width: 40em) {
+  .responsive-nav {
+    max-width: 100%;
+  }
+}
+
+.responsive-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 45%;
+  padding-left: 5%;
+}
+
+@media (max-device-width: 40em) {
+  .js .responsive-nav__list {
+    position: absolute;
+    margin-left: 5%;
+    padding-left: 0;
+  }
+}
+
+@media (min-device-width: 40em) {
+  .responsive-nav__list {
+    background: none;
+  }
+}
+
+.responsive-nav__item {
+  border-top: 1px solid #F16522;
+  height: 75px;
+  padding-top: 2%;
+  padding-right: 3%;
+}
+
+@media (min-device-width: 40em) {
+  .responsive-nav__item {
+    display: inline-block;
+    border-top: none;
+  }
+}
+
+.responsive-nav__link {
+  font-size: 25px;
+  padding-right: 1.5%;
+}
+
+.responsive-nav__link .responsive-nav__toggle {
+  color: #fff;
+  display: block;
+  white-space: nowrap;
+  padding-right: 14px;
+  padding-left: 14px;
+  line-height: 44px;
+}
+
+@media (min-device-width: 40em) {
+  .responsive-nav__link {
+    /*color: #F16522;*/
+    color: #fff;
+  }
+}
+
+@media (max-device-width: 40em) {
+  .navigation ul li a {
+    color: black;
+    font-size: 35px;
+    margin-left: 40%;
+  }
+  .navigation span {
+    padding-top: 2%;
+    display: none;
+  }
+}
+
+.responsive-nav__toggle {
+  display: inline-block;
+  min-width: 44px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  height: 80%;
+  width: 17%;
+  margin-left: 5%;
+  margin-top: 5%;
+  color: black;
+}
+
+.responsive-nav__toggle:before {
+  font-family: FontAwesome;
+  content: "\f0c9";
+  font-size: 16px;
+  line-height: 1;
+  font-size: 65px;
+  color: #F16522;
+}
+
+.responsive-nav__toggle:hover {
+  text-decoration: none;
+}
+
+.responsive-nav--open {
+  overflow: visible;
+}
+
+.responsive-nav--open .responsive-nav__toggle {
+  width: 90%;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  /* Change hamburger icon to a close icon */
+}
+
+.responsive-nav--open .responsive-nav__toggle:before {
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+@media (min-device-width: 40em) {
+  .responsive-nav__toggle {
+    display: none;
+  }
+}
+
+.navigation ul li a:hover {
+  color: #F16522;
+}
+
+.navigation {
+  background-color: #16181C;
+  height: 75px;
+}
+
+.navigation span {
+  color: #fff;
+  font-size: 27px;
+  padding-top: 1%;
+  padding-right: 2.5%;
+}
+
+/*--------------end navigation-------------------*/
+.avatar {
+  background-image: url("../icons/avatar/1.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: 13%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.title {
+  position: absolute;
+  margin-top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  line-height: 0;
+}
+
+.title .main-title {
+  font-size: 39px;
+}
+
+.title .sub-title {
+  font-size: 20px;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background-color: #15171B;
+  position: relative;
+}
+
+header::after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222800%22%20fill=%22rgb(21,23,27)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%202800,0%200,100%22%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 100px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  bottom: -100px;
+}
+
+.about {
+  height: 105%;
+}
+
+.about .about-title {
+  text-align: center;
+  font-size: 39px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  padding-top: 8%;
+  color: #F16522;
+}
+
+.about .skills-title {
+  text-align: center;
+  font-size: 39px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 8%;
+  color: #F16522;
+}
+
+.about .about-description {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 43px;
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about .skills {
+  float: none;
+  margin: 20px auto;
+  padding-left: 10%;
+}
+
+.portfolio {
+  background-color: #F2F2F2;
+  height: 100%;
+  position: relative;
+}
+
+.portfolio::before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222800%22%20fill=%22rgb(242,242,242)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,100%202800,100%202800,0%22%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 100px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  top: -100px;
+}
+
+.portfolio .portfolio-title {
+  text-align: center;
+  font-size: 39px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.portfolio .projects {
+  height: 200px;
+  margin-bottom: 10px;
+  float: none;
+  margin: 20px auto;
+  padding-left: 5%;
+}
+
+.portfolio .projects .project {
+  height: inherit;
+}
+
+.portfolio .projects .project .project-img {
+  width: 100%;
+  height: inherit;
+}
+
+footer {
+  height: 80%;
+  background-color: #16181C;
+  position: relative;
+}
+
+footer::before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22100%22%20width=%222800%22%20fill=%22rgb(21,23,27)%22%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,100%202800,100%202800,0%22%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 100px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  top: -100px;
+}
+
+footer .cv p {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 22px;
+  color: #fff;
+}
+
+footer .cv .download-icon {
+  width: 120px;
+  height: 25px;
+  margin: 0 auto;
+}
+
+footer .contacts {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 17px;
+}
+
+footer .social {
+  color: #fff;
+}
+
+footer .social p {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 25px;
+}
+
+footer .social ul {
+  float: none;
+  margin: 4% auto;
+  width: 30%;
+}
+
+footer .social ul li {
+  padding: 8%;
+  display: inline;
+}
+
+footer .social ul li .fa {
+  color: #F16522;
+}
+
+footer .social .github-icon {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.divide {
+  color: #F16522;
+  width: 25%;
+}
+
+/*
+@media screen and (max-width: 480px){
+	.avatar{
+		width: 250px;
+		height:250px;
+		display: none;
+	}
+}*/
+@media only screen and (max-device-width: 335px) {
+  .avatar {
+    width: 270px;
+    height: 270px;
+    margin-top: 35%;
+  }
+  .title {
+    margin-top: 73%;
+  }
+  .title .main-title {
+    font-size: 75px;
+  }
+  .title .sub-title {
+    font-size: 45px;
+  }
+  .navigation span {
+    font-size: 39px;
+  }
+  .navigation ul li a {
+    font-size: 45px;
+  }
+  .about {
+    height: 90%;
+  }
+  .about .about-title {
+    font-size: 60px;
+    margin-top: 10%;
+  }
+  .about .about-description {
+    width: 90%;
+    font-size: 50px;
+  }
+  .about .skills {
+    margin-top: 21%;
+  }
+  .portfolio {
+    height: 120%;
+  }
+  .portfolio .portfolio-title {
+    font-size: 55px;
+    padding-top: 8%;
+  }
+  .portfolio .projects {
+    height: 250px;
+  }
+  .portfolio .projects .project {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .portfolio .portfolio-title {
+    margin-top: 8%;
+  }
+  footer .cv p {
+    margin-top: 0;
+    font-size: 50px;
+  }
+  .download-icon a i .fa-3x {
+    font-size: 9em;
+  }
+  footer .social p {
+    font-size: 50px;
+    padding-top: 10%;
+  }
+  i.fa {
+    font-size: 8em;
+  }
+  footer .social ul {
+    width: 65%;
+  }
+  footer .cv p {
+    padding-top: 10%;
+  }
+}
+
+@media only screen and (max-device-width: 425px) {
+  .avatar {
+    width: 270px;
+    height: 270px;
+    margin-top: 35%;
+  }
+  .title {
+    margin-top: 73%;
+  }
+  .title .main-title {
+    font-size: 75px;
+  }
+  .title .sub-title {
+    font-size: 45px;
+  }
+  .navigation span {
+    font-size: 39px;
+  }
+  .navigation ul li a {
+    font-size: 45px;
+  }
+  .about {
+    height: 115% !important;
+  }
+  .about .about-title {
+    font-size: 60px;
+    margin-top: 10%;
+  }
+  .about .about-description {
+    width: 90%;
+    font-size: 50px;
+    padding-top: 5%;
+  }
+  .about .skills {
+    margin-top: 14%;
+    margin-bottom: 5%;
+  }
+  .about .skills-title {
+    margin-top: 20%;
+  }
+  .portfolio {
+    height: 175%;
+  }
+  .portfolio .portfolio-title {
+    font-size: 55px;
+    padding-top: 8%;
+  }
+  .portfolio .projects {
+    height: 250px;
+  }
+  .portfolio .projects .project {
+    height: 135%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+  .portfolio .portfolio-title {
+    margin-top: 8%;
+  }
+  footer {
+    height: 100% !important;
+  }
+  footer .cv p {
+    margin-top: 0;
+    font-size: 50px;
+  }
+  .download-icon a i .fa-3x {
+    font-size: 9em;
+  }
+  footer .social p {
+    font-size: 50px;
+    padding-top: 10%;
+  }
+  i.fa {
+    font-size: 8em;
+  }
+  footer .social ul {
+    width: 65%;
+  }
+  footer .cv p {
+    padding-top: 20% !important;
+  }
+  .skills img {
+    width: 70%;
+    height: 12%;
+  }
+  footer .cv .download-icon {
+    padding-left: 0 !important;
+  }
+  header {
+    height: 100% !important;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .about {
+    height: 70%;
+  }
+  .about .skills {
+    float: none;
+    margin: 20px auto;
+    padding-left: 22%;
+    /*25*/
+  }
+  .portfolio {
+    display: none;
+  }
+  .portfolio .projects {
+    display: none;
+  }
+  footer {
+    height: 50%;
+  }
+  footer .cv p {
+    padding-top: 10%;
+  }
+  footer .cv .download-icon {
+    padding-left: 4%;
+  }
+  header {
+    height: 50%;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .title {
+    margin-top: 29%;
+  }
+  .avatar {
+    margin-top: 15%;
+  }
+  .divide {
+    width: 5%;
+  }
+  footer .cv .download-icon {
+    padding: 0 1.5em 0 2.5em;
+  }
+  footer .social ul {
+    padding: 0 1.5em 0 5.5em;
+  }
+}
